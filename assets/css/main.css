@@ -1,0 +1,191 @@
+.rocket-card {
+  background-color: white !important;
+  color: black !important;
+  border-radius: 12px;
+}
+
+
+
+.dark-remove-btn {
+  background-color: #ff4d4d !important;
+  color: white !important;
+}
+
+.light-remove-btn {
+  background-color: #d32f2f !important;
+  color: white !important;
+}
+.appbar-light {
+  background-color: white !important;
+  color: black !important;
+}
+
+.appbar-dark {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+.dark .rocket-card {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+
+body{
+   font-family: 'Poppins', sans-serif !important;
+}
+.dark {
+  --background: #000010;
+
+  * {
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  /* Force white background for dropdown in dark mode */
+body.dark .v-overlay__content {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Optionally fix text color inside options */
+body.dark .v-overlay__content .v-list-item-title {
+  color: black !important;
+}
+
+.appbar-dark {
+  background-color: #1E1E1E !important;
+  color: white;
+}
+
+.appbar-light {
+  background-color: white !important;
+  color: black;
+}
+
+.footer-dark {
+  background-color: #121212 !important;
+  color: white;
+}
+
+.footer-light {
+  background-color: #f5f5f5 !important;
+  color: black;
+}
+
+  .v-input,
+  .v-input input,
+  .v-input .v-field-label,
+  .v-input .v-icon,
+  .v-input .v-selection-control__input {
+    color: white !important;
+    caret-color: white !important;
+  }
+
+  .v-field {
+    border-color: white !important;
+  }
+
+  .v-field::before,
+  .v-field::after {
+    border-color: white !important;
+  }
+
+  .v-select .v-icon {
+    color: white !important;
+  }
+
+
+
+  .v-label,
+  .v-field-label {
+    color: white !important;
+  }
+
+  .v-application,
+  .v-theme--light,
+  .v-theme--dark {
+    background-color: transparent !important;
+  }
+
+.v-app-bar .v-btn .v-icon {
+  color: white !important;
+}
+
+html,
+body,
+#__nuxt,
+.v-application {
+  background: var(--background);
+  overflow-x: hidden; /* ✅ allow vertical overflow */
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+
+  .v-card {
+    background-color: white !important;
+    color: #e0e0e0 !important;
+  }
+
+  .v-card * {
+    color: black !important;
+  }
+
+  /* Global star styles */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: moveStar linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+@keyframes moveStar {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  animation: shootingStar 3s ease-in-out infinite;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+@keyframes shootingStar {
+  0% {
+    transform: translate(-200px, -200px) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+.star:nth-child(odd) {
+  animation-duration: 8s;
+  opacity: 0.6;
+}
+
+.star:nth-child(even) {
+  animation-duration: 12s;
+  opacity: 0.8;
+}
+}

@@ -5,7 +5,10 @@ export default defineNuxtConfig({
 	future: { compatibilityVersion: 4 },
 	build: { transpile: ['vuetify'] },
 	imports: { dirs: ['./stores'] },
+	
+	css: ['./assets/css/main.css'
 
+	],
 	apollo: {
 		autoImports: true,
 		proxyCookies: true,
@@ -23,4 +26,8 @@ export default defineNuxtConfig({
 
 	modules: ['@nuxtjs/apollo', ['@pinia/nuxt', { autoImports: ['defineStore', 'acceptHMRUpdate'] }]],
 	compatibilityDate: '2024-11-11',
+	
+
+
+	
 })

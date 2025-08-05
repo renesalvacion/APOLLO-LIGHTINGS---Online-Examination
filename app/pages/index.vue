@@ -1,5 +1,6 @@
 <template>
 	<v-container>
+	
 		<h2>
 			<v-icon icon="mdi-vuetify" />
 			Starter Template
