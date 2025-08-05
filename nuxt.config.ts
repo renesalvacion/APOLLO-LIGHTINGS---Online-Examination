@@ -2,7 +2,9 @@ import vuetify from 'vite-plugin-vuetify'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-	future: { compatibilityVersion: 4 },
+	srcDir: 'app/',
+	components: true,
+	
 	build: { transpile: ['vuetify'] },
 	imports: { dirs: ['./stores'] },
 	
@@ -25,7 +27,9 @@ export default defineNuxtConfig({
 	},
 
 	modules: ['@nuxtjs/apollo', ['@pinia/nuxt', { autoImports: ['defineStore', 'acceptHMRUpdate'] }]],
-	compatibilityDate: '2024-11-11',
+	 nitro: {
+    compatibilityDate: '2024-11-11'
+  }
 	
 
 

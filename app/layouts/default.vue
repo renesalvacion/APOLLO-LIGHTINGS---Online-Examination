@@ -1,38 +1,20 @@
 <template>
-  <div class="space-bg">
-    <!-- Starfield -->
-    <div
-      v-for="n in 100"
-      :key="'star-' + n"
-      class="star"
-      :style="randomStarStyle()"
-    ></div>
+  <v-app>
+    <Navbar />
 
-    <!-- Shooting stars -->
-    <div
-      v-for="n in 5"
-      :key="'shooting-' + n"
-      class="shooting-star"
-      :style="randomShootStyle()"
-    ></div>
-<v-app>
-    <!-- App Content (wrapped in v-app!) -->
- <!-- Use your Navbar component -->
-<Navbar />
+    <v-main>
+      <NuxtPage />
+    </v-main>
 
-
-      <v-main>
-        <NuxtPage />
-      </v-main>
-
-      <Footer/>
-    </v-app>
-  </div>
+    <Footer />
+  </v-app>
 </template>
 
 
-<script setup lang="ts">
 
+<script setup lang="ts">
+import Navbar from '~/components/Navbar.vue'
+import Footer from '~/components/Footer.vue'
 
 useHead({
   link: [
