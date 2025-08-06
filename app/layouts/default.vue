@@ -1,4 +1,19 @@
-<template>
+<template><div class="star-container">
+  <div
+    v-for="i in 50"
+    :key="'star-' + i"
+    class="star"
+    :style="randomStarStyle()"
+  ></div>
+
+  <div
+    v-for="i in 3"
+    :key="'shooting-star-' + i"
+    class="shooting-star"
+    :style="randomShootStyle()"
+  ></div>
+</div>
+
   <v-app>
     <Navbar />
 
@@ -75,15 +90,24 @@ function randomStarStyle() {
 }
 
 function randomShootStyle() {
-  const top = Math.random() * 80 + 'vh'
+  const top = Math.random() * 20 + 'vh'  // start from higher position
   const left = Math.random() * 100 + 'vw'
-  const delay = Math.random() * 10 + 's'
+  const delay = Math.random() * 5 + 's'
+  const duration = 1 + Math.random() * 1 + 's'
+
+  const x = `${Math.random() * 200 - 100}px`  // left or right movement
+  const y = `${300 + Math.random() * 300}px`  // downward
+
   return {
     top,
     left,
     animationDelay: delay,
-  }
+    animationDuration: duration,
+    '--x': x,
+    '--y': y,
+  } as any
 }
+
 
 
 useHead({

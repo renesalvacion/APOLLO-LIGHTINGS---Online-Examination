@@ -60,4 +60,7 @@ const isLight = computed(() => theme.global.name.value === 'light')
 
     <v-spacer />
   </v-app-bar>
+
+ 
+
 </template>

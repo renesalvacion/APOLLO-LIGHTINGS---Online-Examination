@@ -4,7 +4,11 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
 	srcDir: 'app/',
 	components: true,
-	
+	ssr: false,
+	devtools: {
+  	enabled: false
+	},
+
 	build: { transpile: ['vuetify'] },
 	imports: { dirs: ['./stores'] },
 	
@@ -23,6 +27,7 @@ export default defineNuxtConfig({
 		optimizeDeps: {
 			include: ['graphql-tag'],
 		},
+		
 		plugins: [vuetify()],
 	},
 
